@@ -16,8 +16,13 @@ class Variation extends Model
         return money($this->price);
     }
 
+    public function stocks()
+    {
+        return $this->hasMany(Stock::class);
+    }
+
     public function product()
     {
         return $this->belongsTo(Product::class);
-    }
+    } 
 }
